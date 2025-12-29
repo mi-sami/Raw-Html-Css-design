@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/88e3366450.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/88e3366450.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(253, 251, 251);
+        }
+        *{
+            box-sizing: border-box;
+            margin: o;
+            padding: 0;
+        }
+        
+        
+
+        .nevigation{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-container {
+  
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* option Button */
+.ai-btn {
+  width: 40px;
+  height: 30px;
+  border: 2px solid #00c16a;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 25px 20px;
+}
+
+.ai-btn span {
+  width: 70%;
+  height: 3px;
+  background-color: #00c16a;
+  margin: 0 auto;
+}
+
+/* Hide checkbox */
+#menu-toggle { display: none; }
+
+/* Dropdown Menu */
+.menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px 0;
+  background: white;
+  border: 1px solid #00c16a;
+  border-radius: 5px;
+  width: 120px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: none;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.menu li {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: #e8fff4;
+}
+
+/* Show menu when clicked */
+#menu-toggle:checked + .ai-btn + .menu {
+  display: block;
+}
+
+.left{
+    width: 400px;
+    margin: auto;
+    padding-left:0 ;
+}
+
+.title{
+    font-size: 42px;
+    width: 250px;
+    text-align: center;
+    margin: 30px 20px;
+    font-weight: 600;
+}
+.descrive{
+    width: 250px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(46, 40, 40);
+    margin-left: 20px;
+}
+
+.button{
+    color: white;
+    height: 30px;
+    width: 240px;
+    background-color: #00c16a ;
+    border: 2px solid #00c16a;
+    margin:30px 26px
+    
+}
+.button:hover{
+    background-color: rgb(31, 30, 30);
+    border:2px solid #00c16a;
+    
+    
+}
+i:hover{
+    color: #00c16a;
+}
+i{
+    margin-left: 5px;
+    color: white;
+}
+.image1{
+      width: 230px;
+    height: 100%;
+    
+    border-radius: 15px;
+    
+}
+
+.image2 {
+     position: absolute;
+    bottom: -20px;
+    right: -20px;
+    border-radius: 15px;
+    height: 100px;
+    
+
+    
+   
+}
+.image{
+   position: relative;
+   width: 245px;
+   height: 300px;
+   margin-left:30px; ;   /* center align */
+}
+
+.image::after{
+    content: '5*';
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 50px;
+}
+.main1{
+    width: 200px;
+    margin: auto;
+    position: relative;
+}
+
+.company-logo{
+    width: 300px;
+    margin-top: 50px ;
+    position: relative;
+    padding-bottom: 50px;
+   
+}
+.partition1{
+    display: flex;
+    gap: 50px;
+}
+.logo3{
+    position: absolute;
+    left: 80px;
+    margin-top: 60px;
+}
+
+.main2{
+    width: 350px;
+    margin: 0 auto;
+}
+
+.facilities{
+    width: 350px;
+    padding: 60px 0px;
+    margin:  60px 55px;
+    border-top: 2px solid rgb(236, 228, 228);
+    border-bottom: 2px solid rgb(236, 228, 228);
+}
+
+.up{
+    display: flex;
+    gap: 90px;
+    width: 150px;
+}
+
+.truck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+.img{
+    background-color: rgb(231, 238, 232);
+    height: 60px;
+    width: 60px;
+    padding: 17px;
+}
+.info{
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+}
+.info2{
+    width: 110px;
+    text-align: center;
+}
+
+.down{
+    display: flex;
+    gap: 90px;
+    width: 150px;
+    margin-top: 50px;
+}
+
+.icon-title{
+    margin-top: 30px;
+}
+
+.Benefit-section{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1-image1{
+    width: 225px;
+    
+    border-radius: 6px;
+    box-shadow:   0px 12px 15px 20px rgba(148,166,152,0.75);
+-webkit-box-shadow: 0px 12px 15px 20px rgba(148,166,152,0.75);
+-moz-box-shadow: 0px 12px 15px 20px rgba(148,166,152,0.75);
+    
+}
+
+.section1-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.small-title{
+    font-size: 15px;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    
+}
+
+.section1-title{
+    font-weight: 700;
+    font-size: 30px;
+    width: 300px;
+    margin: 0;
+    
+    
+    text-align: center;
+    padding-bottom: 20px;
+    
+    
+}
+
+
+
+
+
+
+@media (min-width: 768px){
+
+    /* Dropdown button hide */
+    .menu-container .ai-btn {
+        display: none;
+    }
+
+    /* Checkbox hide */
+    #menu-toggle{
+        display: none;
+    }
+
+    /* Dropdown (position absolute) → normal horizontal menu */
+    .menu{
+        width: 900px;
+    position: static;
+    display: flex !important;
+    background: none;
+    border: none;
+    box-shadow: none;
+    gap: 10px;
+    margin-right: 0;
+    font-size: 15px;
+    align-items: center;
+}
+
+
+    .menu li{
+        cursor: pointer;
+    }
+
+    .menu li:hover{
+        background: none;
+        color: #00c16a;
+    }
+
+    .left{
+    width: 400px;
+    margin: 0;
+    padding-left:0 ;
+    
+}
+
+.title{
+    font-size: 40px;
+    width: 240px;
+    text-align: justify;
+    margin-left: 40px;
+    font-weight: 600;
+}
+.descrive{
+    width: 400px;
+    text-align: justify;
+    padding-left: 40px;
+    font-size: 13px;
+    color: gray;
+    margin: 0;
+}
+
+    .button{
+    color: white;
+    height: 40px;
+    width: 120px;
+    background-color: #00c16a ;
+    border: 2px solid #00c16a;
+    margin:30px 40px;
+    
+    
+}
+i{
+    margin-left: 5px;
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(31, 30, 30);
+    border:2px solid #00c16a;
+    
+    
+}
+.image1{
+      width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    
+    
+}
+
+.image2 {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    border-radius: 15px;
+    height: 100px;
+    
+
+    
+   
+}
+.image{
+   position: relative;
+    width: 305px;
+    height: 470px;
+    margin: 0px auto;
+    padding-top: 0px;
+    
+}
+
+
+.main1{
+    width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+     align-items: center;
+     position: relative;
+     
+
+}
+.nevigation{
+    width: 950px;
+    margin: auto;
+    display: flex;
+    gap: 250px;
+}
+
+.company-logo{
+    width: 500px;
+    margin-top: 30px ;
+    position: absolute;
+    top: 380px;
+    left: 20px;
+    padding-bottom: 50px;
+    border: none;
+}
+.partition1{
+    display: flex;
+    gap: 50px;
+}
+.logo3{
+    position: absolute;
+    left: 320px;
+    margin-top: 0px;
+}
+
+.mainpartiton1{
+    
+    width: 1000px;
+    height: 300px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+     position: relative;
+}
+
+/* === FACILITIES DESKTOP LAYOUT === */
+.main2{
+    width: 900px;
+    margin: 0 auto;
+}
+.facilities {
+    width: 650px;
+    margin-top: 220px ;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    padding: 40px 0;
+
+    display: flex;
+    gap: 190px;
+    align-items: center;
+}
+
+.up, .down {
+    display: flex;
+    gap: 80px;
+    margin: 0; 
+    margin-top: 0px;
+}
+
+.truck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.Benefit-section{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 0;
+}
+
+.section1-image1{
+    width: 325px;
+    height: 400px;
+    border-radius: 0px;
+}
+
+.section1-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}
+
+.section1-title{
+    text-align: left;
+}
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        
+        <!-- Header and nav section start -->
+        <header class="navbar">
+            <nav class="nevigation">
+                <span style="font-size: 30px; font-weight: 900;color: #00c16a; padding:20px">Foodies</span>
+
+                <div class="menu-container">
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="ai-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <ul class="menu">
+    <li>Home</li>
+    <li>About us</li>
+    <li>Service us</li>
+    <li>Our company</li>
+    <li>Pages</li>
+  </ul>
+
+</div>
+
+            </nav>
+        </header>
+<!-- Navbar end -->
+
+            <!-- Main 1 Section start -->
+        <main class="main1">
+
+            <div class="mainpartiton1">
+
+            <div class="left">
+                <div class="title">
+                <span>We're Serious For Food.</span>
+                </div>
+
+                <div class="descrive">
+                    <span>We strive to provide a space where guests can connect with themselves and explore their full potential, offering a safe place.</span>
+                </div>
+                <div class="">
+                    <button class="button">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="image">
+                <img class="image1" src="./Place Your Image.png" alt="">
+
+                <img class="image2" src="./Polcadot (1).png" alt="">
+            </div>
+
+            </div>
+
+            <div class="company-logo">
+
+                <div class="partition1">
+
+                <div class="logo1">
+                    <img src="./Group 1.png" alt="">
+                </div>
+
+                <div class="logo2">
+                    <img src="./Group 2.png" alt="">
+                </div>
+
+                
+                
+                <div class="logo3">
+                    <img src="./Group 3.png" alt="">
+                </div>
+
+                </div>
+            </div>
+            
+        </main>
+        <!-- Main 1 Section end -->
+
+        <!-- Main 2 start -->
+
+        <main class="main2">
+
+            <div class="facilities">
+                <div class="up">
+                    <div class="truck">
+                        <div class="img">
+                        <img src="./Icon awesome-truck.png" alt="">
+                        </div>
+                        <div class="icon-title">
+                        <p class="info">
+                            Free Shipping
+                        </p>
+                        <p class="info2">
+                            Orders over $140
+                        </p>
+                        </div>
+                    </div>
+                    <div class="truck">
+                        <div class="img">
+                        <img src="./Icon awesome-wallet.png" alt="">
+                        </div>
+                        <div class="icon-title">
+                        <p class="info">
+                            Quick Payment
+                        </p>
+                        <p class="info2">
+                            100% secure payment
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="truck">
+                        <div class="img">
+                        <img src="./Icon awesome-percentage.png" alt="">
+                        </div>
+                        <div class="icon-title">
+                        <p class="info">
+                            Special Promo
+                        </p>
+                        <p class="info2">
+                            Get special promo
+                        </p>
+                        </div>
+                    </div>
+                    <div class="truck">
+                        <div class="img">
+                        <img src="./Icon awesome-headphones.png" alt="">
+                        </div>
+                        <div class="icon-title">
+                        <p class="info">
+                            24/7 Support
+                        </p>
+                        <p class="info2">
+                            Ready support
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main 2 end -->
+
+        <!-- Content section (1) start -->
+
+        <section class="Benefit-section">
+            <div class="section1-image">
+                <img src="./Place Your Image (1).png" class="section1-image1" alt="">
+            </div>
+
+            <div class="section1-content">
+                
+                    <span class="small-title">Our Benefit</span>
+                
+
+                
+                    <p class="section1-title">The More Healthy Food The Better</p>
+                
+
+                <div class="section1-description">
+                    <p><i class="fa-solid fa-check" style="color: #14b408;"></i>Be Alive With Veggie Food</p>
+                    <p><i class="fa-solid fa-check" style="color: #14b408;"></i>It's The Place To Be.</p>
+                    <p><i class="fa-solid fa-check" style="color: #14b408;"></i>Nonstop Veggie Food</p>
+                    <p><i class="fa-solid fa-check" style="color: #14b408;"></i>The Best Silk Dish In Town</p>
+                    <p><i class="fa-solid fa-check" style="color: #14b408;"></i>Truffles, Egg & Pumpkin Spice</p>
+                </div>
+            </div>
+        </section>
+        <!-- Benefit section (1) end -->
+
+        <!-- star section start -->
+
+        <section class="star-section">
+
+            <div class="star-image">
+                <img src="./Place Your Image (3).png" alt="">
+            </div>
+
+            <div class="star-content">
+
+                 <div class="section1-content">
+                
+                    <span class="small-title">Our Benefit</span>
+                
+
+                
+                    <p class="section1-title">The More Healthy Food The Better</p>
+                <div class="sold">
+                    <p>1,500</p>
+                    <p>Sold Product</p>
+                </div>
+
+                <div class="Positive">
+                    <p>500</p>
+                    <p>Positive feedback</p>
+                </div>
+
+                <div class="official">
+                    <p>400</p>
+                    <p>Official Store</p>
+                </div>
+
+                <div class="">
+                    <button class="button">Get Started <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
